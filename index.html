@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Muhammad Arslan" />
+	<title>CP TutsPaging</title>
+	
+	<!--Font-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500|Lora:400,700|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+	<!-- Style -->
+	<link rel='stylesheet' href='https://bootswatch.com/flatly/bootstrap.min.css' type='text/css' media='all' />
+
+	<link rel='stylesheet' href='assets/tutspaging.css' type='text/css' media='all' />
+	<style>body {font-size: 18px;}</style>
+
+</head>
+
+<body>
+
+	<!-- MAIN WRAPPER -->
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+
+				<!-- CONTENT WRAPPER -->
+				<article class="content-wrapper tutspaging">
+
+					<h1>CP TutsPaging</h1>
+					<a href="#showall" id="showall-toggle">Show All</a>
+					<hr>
+
+					<!-- Content -->
+					<div class="step-contents tab-content" id="tabs">
+						<div class="tab-pane step active">
+							<p>Tutspaging menggunakan sistem tabs milik Bootstrap, jadi ada dependensi ke bootstrap.</p>
+
+							<p>3 elemen utama pada paging ini:</p>
+							<ul>
+								<li>Artikel</li>
+								<li>Pagination</li>
+								<li>Link showall</li>
+							</ul>
+
+							Pada step selanjutnya dijelaskan cara integrasi ke sistem.
+						</div>
+
+						<div class="tab-pane step">
+							<h2>Assets</h2>
+							<p>Embed file <code>tutspaging.css</code> di head dan <code>tutspaging.js</code> di footer.</p>
+						</div>
+
+						<div class="tab-pane step">
+							<h2>Artikel</h2>
+							<p>Artikel dibungkus di dalam elemen <code>article</code> atau elemen lainnya dan menambahkan class <code>.tutspaging</code> padanya. Artikel tersusun dari <strong>judul</strong>, <strong>konten</strong> dan <strong>pagination</strong>.</p>
+							<p>Konten artikel harus dikemas dalam container berclass <code>.step-contents .tab-content</code>. Pada konten artikel harus ada pemisahan konten per pagenya, menggunakan class <code>.tab-pane .step</code>.</p>
+						</div>
+
+						<div class="tab-pane step">
+							<h2>Pagination</h2>
+							<p>Tambahkan kode pagination ini di bagian bawah setelah elemen <code>.step-contents</code>:</p>
+<pre>
+&lt;ul id="step-pagination" class="nav nav-pills">
+	&lt;li id="pagination-loading">
+		&lt;img style="margin:0;" src="https://www.codepolitan.com/assets/img/loading.gif">
+	&lt;/li>
+&lt;/ul></pre>
+						</div>
+						<div class="tab-pane step">
+							<h2>Showall Link</h2>
+							<p>Link ini dapat disimpan dimana saja di halaman:</p>
+							<code>&lt;a href="#showall" id="showall-toggle">Show All&lt;/a></code>
+							<br>
+							<br>
+							<p>Bagian yang wajib ada dari link ini adalah atribut href, id dan captionnya. Bila ingin mengganti caption, maka gantilah di dalam file js.</p>
+						</div>
+					</div>
+
+					<ul id="step-pagination" class="nav nav-pills">
+						<li id="pagination-loading"><img style="margin:0;" src="https://www.codepolitan.com/assets/img/loading.gif"></li>
+					</ul>
+
+				</article>
+				<!-- END: CONTENT WRAPPER -->
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- END: MAIN WRAPPER -->
+
+<!-- Bride -->
+<input type="hidden" id="base_url" value="https://www.codepolitan.com">
+
+<!-- Js Head -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="assets/tutspaging.js"></script>
+
+</body>
+</html>
